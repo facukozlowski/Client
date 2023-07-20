@@ -1,0 +1,30 @@
+.container{
+    height: 40vh;
+    height: 40vh;
+    background-color: rgba(62, 226, 111, 0.486);
+    position: relative;
+    padding: 5rem;
+}
+
+.inputs{
+    position: relative;
+    align-items: center;
+    width: 13rem;
+    position: relative;
+}
+
+
+.btn{
+    width: 15vh;
+    height: 5vh;
+    background-color: rgb(213, 255, 213);
+    border: 2px solid black;
+}
+
+.btn:hover{
+    cursor: pointer;
+    box-shadow: 5px 5px rgba(0,0,0,0.3);
+    height: 5.2vh;
+    width: 15.2vh;
+    transition: 0.3s;
+}

@@ -1,0 +1,46 @@
+.container{
+    display: flex;
+    margin-top: 70px;
+    background-color: #577056;
+    position: relative;
+    border-radius: 5px;
+    flex-direction: column;
+}
+
+.container:hover{
+    box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.75);
+    transition: 0.2s;
+}
+
+.closeBtn{
+    position: relative;
+    left: 8.7rem;
+    bottom: 0.15rem;
+    height: 23px;
+    width: 23px;
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+}
+
+.closeBtn:hover{
+    box-shadow: 3px 3px rgba(0,0,0,0.4);
+    background-color: #f81010;
+}
+
+.nameContainer{
+    position: relative;
+    border-radius: 5px;
+    text-decoration: none;
+    width: auto;
+    height: auto;
+    bottom: 10%;
+    background-color: rgb(206, 206, 70);
+    border: 1.3px solid rgb(2, 15, 73);
+    font-size: small;
+}
+
+.speciesName{
+    text-align: left;
+    align-self: center;
+}

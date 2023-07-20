@@ -1,0 +1,35 @@
+.div{
+    width: 45vh;
+    height: 6vh;
+    margin-top: 0.1vh;
+    margin-left: 78vw;
+    background-color: rgb(120, 187, 140);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.input{
+    width: 60%;
+    height: 50%;
+    border: none;
+    border-radius: 0.3rem;
+    padding: 0 0 0 1rem ;
+    align-self: center;
+}
+
+.btn{
+    width: 6vw;
+    height: 4vh;
+    border: none;
+    border-radius: 0.3rem;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    font-size: medium;
+}
+
+.btn:hover{
+    width: 7vw;
+    height: 5vh;
+    transition: 0.4s;
+}
