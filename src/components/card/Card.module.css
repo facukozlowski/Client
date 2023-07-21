@@ -1,9 +1,9 @@
 .container{
     display: flex;
-    margin-top: 70px;
-    background-color: #577056;
+    margin-top: 50px;
+    background-color: rgb(120, 187, 140);
     position: relative;
-    border-radius: 5px;
+    border-radius: 4px;
     flex-direction: column;
 }
 
@@ -14,13 +14,10 @@
 
 .closeBtn{
     position: relative;
-    left: 8.7rem;
-    bottom: 0.15rem;
-    height: 23px;
     width: 23px;
     color: white;
     background-color: black;
-    border-radius: 5px;
+    border-radius: 4px;
 }
 
 .closeBtn:hover{
@@ -28,19 +25,36 @@
     background-color: #f81010;
 }
 
+.btnFav{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    background-color: rgb(120, 187, 140);
+}
+
 .nameContainer{
     position: relative;
-    border-radius: 5px;
-    text-decoration: none;
+    top: -20px;
     width: auto;
     height: auto;
     bottom: 10%;
-    background-color: rgb(206, 206, 70);
-    border: 1.3px solid rgb(2, 15, 73);
-    font-size: small;
+    background-color: rgb(25, 111, 122);
+    font-size: large;
+}
+
+.name{
+    text-decoration: none;
+    color: rgb(175, 231, 123);
+    font-size: large;
 }
 
 .speciesName{
-    text-align: left;
-    align-self: center;
-}
+    width: auto;
+    height: auto;
+    bottom: 10%;
+    font-size: large;
+    display: block
+;}

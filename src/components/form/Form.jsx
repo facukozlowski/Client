@@ -30,16 +30,18 @@ const Form = ({login}) => {
   return (
     <form onSubmit={handleSubmit} className={style.container}>
       <div className={style.inputs}>
-        <label htmlFor="email">Email: </label>
+        <label className={style.label} htmlFor="email">  Email: </label>
         <input
+        className={style.input}
           type="text"
           name="email"
           value={userData.email}
           onChange={handleChange}
         />
         <p className={style.error}>{errors.email && errors.email}</p>
-        <label htmlFor="password">Password: </label>
+        <label className={style.label} htmlFor="password">  Password: </label>
         <input
+        className={style.input}
           type="password"
           name="password"
           value={userData.password}
@@ -47,7 +49,7 @@ const Form = ({login}) => {
         />
         <p className={style.error}>{errors.password && errors.password}</p>
       </div>
-      <button>Submit</button>
+      <button className={style.btn}>INGRESAR</button>
     </form>
   );
 };

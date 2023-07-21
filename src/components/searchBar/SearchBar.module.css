@@ -1,35 +1,33 @@
 .div{
-    width: 45vh;
+    width: 40vh;
     height: 6vh;
-    margin-top: 0.1vh;
-    margin-left: 78vw;
     background-color: rgb(120, 187, 140);
-    display: flex;
     justify-content: space-around;
-    align-items: center;
 }
 
 .input{
-    width: 60%;
-    height: 50%;
-    border: none;
+    width: 20%;
+    height: 60%;
     border-radius: 0.3rem;
-    padding: 0 0 0 1rem ;
-    align-self: center;
+    text-align: center;
+    align-content: center;
+    padding: 0.5rem ;
+    font-family:'Times New Roman';
 }
 
 .btn{
-    width: 6vw;
+    width: 5vw;
     height: 4vh;
     border: none;
     border-radius: 0.3rem;
-    color: rgb(0, 0, 0);
+    color: rgb(50, 119, 36);
     cursor: pointer;
     font-size: medium;
 }
 
 .btn:hover{
-    width: 7vw;
-    height: 5vh;
+    width: 5.3vw;
+    height: 4.2vh;
     transition: 0.4s;
+    box-shadow: 5px 5px rgba(0,0,0,0.3);
 }

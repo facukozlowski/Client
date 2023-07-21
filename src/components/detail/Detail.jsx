@@ -8,7 +8,7 @@ const Detail = () => {
   const [character, setCharacter] = useState({});
 
   useEffect(() => {
-    axios(`https://rickandmortyapi.com/api/character/${id}`).then(
+    axios(`http://localhost:3001/rickandmorty/character/${id}`).then(
       ({ data }) => {
         if (data.name) {
           setCharacter(data);
@@ -24,10 +24,10 @@ const Detail = () => {
     <div className={style.container}>
       <img src={character?.image} alt={character?.name} />
       <h2 className={style.nameContainer}>{character?.name}</h2>
-      <h2>{character?.status}</h2>
-      <h2>{character?.species}</h2>
-      <h2>{character?.origin?.name}</h2>
-      <h2>{character?.gender}</h2>
+      <h2 className={style.speciesName}>{character?.status}</h2>
+      <h2 className={style.speciesName}>{character?.species}</h2>
+      <h2 className={style.speciesName}>{character?.origin?.name}</h2>
+      <h2 className={style.speciesName}>{character?.gender}</h2>
     </div>
   );
 };

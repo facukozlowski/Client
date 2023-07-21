@@ -13,6 +13,7 @@ const SearchBar = ({ onSearch }) => {
       <input
         className={style.input}
         type="search"
+        placeholder="id"
         onChange={handleChange}
         value={id}
       />

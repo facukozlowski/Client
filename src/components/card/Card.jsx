@@ -1,5 +1,5 @@
 import style from "./Card.module.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { addFav, removeFav } from "../../redux/actions";
 import { connect } from "react-redux";
 import { useState, useEffect } from "react";
@@ -38,19 +38,19 @@ function Card({
   return (
     <div className={style.container}>
       {isFav ? (
-        <button onClick={handleFavorite}>❤️</button>
+        <button className={style.btnFav} onClick={handleFavorite}>❤️</button>
       ) : (
-        <button onClick={handleFavorite}>🤍</button>
+        <button className={style.btnFav} onClick={handleFavorite}>🤍</button>
       )}
       <button className={style.closeBtn} onClick={() => onClose(id)}>
         X
       </button>
       <img src={image} alt="" />
-      <Link to={`/detail/${id}`}>
+      <NavLink className={style.name} to={`/detail/${id}`}>
         <h2 className={style.nameContainer}>{name}</h2>
-      </Link>
+      </NavLink>
       <h2 className={style.speciesName}>{species}</h2>
-      <h2>{gender}</h2>
+      <h2 className={style.speciesName}>{gender}</h2>
     </div>
   );
 }

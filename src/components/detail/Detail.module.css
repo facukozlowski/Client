@@ -9,11 +9,16 @@
 
 .nameContainer{
     position: relative;
-    border-radius: 5px;
-    text-decoration: none;
-    width: auto;
-    height: auto;
-    bottom: 10%;
-    background-color: rgb(206, 206, 70);
-    border: 1.3px solid rgb(2, 15, 73);
+    top: -20px;
+    bottom: 5%;
+    background-color: rgb(25, 111, 122);
+    font-size: x-large;
+    padding: 25px;
+    color: rgb(175, 231, 123);
 }
+
+
+.speciesName{
+    font-size: x-large;
+    display: block
+;}

@@ -9,36 +9,45 @@ import Detail from "./components/detail/Detail";
 import  Form  from "./components/form/Form";
 import Favorites from "./components/favorites/Favorites";
 
+const URL = 'http://localhost:3001/rickandmorty/login/'; 
+// const email = 'facukozlowski@gmail.com';
+//const password = 'facu1234';
+
 function App() {
   const location = useLocation();
   const [characters, setCharacters] = useState([]);
   const [access, setAccess] = useState(false);
   const navigate = useNavigate();
 
-  const email = 'facukozlowski@gmail.com';
-  const password = 'facu1234';
+  const login = async (userData) => {
+    try {
+      const { email, password } = userData;
+      const { data } = await axios(URL + `?email=${email}&password=${password}`)
+      const { access } = data;
 
-  const login = (userData) => {
-    if(userData.email === email && userData.password === password){
-       setAccess(true);
-       navigate('/home');
+      setAccess(data);
+      access && navigate('/home');
+      
+    } catch (error) {
+      console.log(error.message)
     }
- }
+  }
 
  useEffect(() => {
   !access && navigate('/');
-}, [access]);
+}, [access, navigate]);
 
-  const onSearch = (id) => {
-    axios(`https://rickandmortyapi.com/api/character/${id}`)
-      .then((response) => response.data)
-      .then((data) => {
-        if (data.name) {
-          setCharacters((oldChars) => [...oldChars, data]);
-        } else {
-          window.alert("¡No hay personajes con este ID!");
-        }
-      });
+  const onSearch = async (id) => {
+    try {
+      const { data } = await axios(`http://localhost:3001/rickandmorty/character/${id}`)
+      
+      if(data.name) {
+        setCharacters((oldChars) => [...oldChars, data]);
+      }; 
+
+    } catch (error) {
+      alert("¡No hay personajes con este ID!");
+      }
   };
 
   const onClose = (id) => {
@@ -71,3 +80,4 @@ function App() {
 }
 
 export default App;
+
